@@ -10,7 +10,9 @@
   "contributors": [
     {"name": "Grigory V.", "web": "http://myfreeweb.ru"}
   ],
-  "licenses": [ "MIT" ],
+  "licenses": [
+    {"type": "MIT", "url": "https://github.com/myfreeweb/coffeebot/raw/master/LICENSE"}
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/myfreeweb/coffeebot.git"
