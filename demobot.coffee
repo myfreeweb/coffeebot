@@ -1,5 +1,4 @@
-{Bot} = require './src/coffeebot'
-{Local} = require './src/local'
+{Bot, Local} = require './src/index'
 
 b = new Bot
 
