@@ -1,0 +1,30 @@
+{
+  "name": "coffeebot",
+  "description": "Write cross-network chat bots in CoffeeScript",
+  "version": "0.1.0",
+  "keywords": [ "coffeescript", "chat", "irc" ],
+  "author": "Grigory V. <me@myfreeweb.ru>"
+  "maintainers": [
+    {"name": "Grigory V.", "web": "http://myfreeweb.ru"}
+  ],
+  "contributors": [
+    {"name": "Grigory V.", "web": "http://myfreeweb.ru"}
+  ],
+  "licenses": [ "MIT" ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/myfreeweb/coffeebot.git"
+  },
+  "bugs": {
+    "email": "me@myfreeweb.ru",
+    "url": "https://github.com/myfreeweb/coffeebot/issues"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "dependencies": {
+    "coffee-script": ">=1.0.0",
+    "irc": "*"
+  },
+  "main": "./src/index.js"
+}

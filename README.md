@@ -2,6 +2,9 @@
 a CoffeeScript framework for writing cross-network chat bots.
 Inspired by [evilbot](https://github.com/defunkt/evilbot).
 
+## Installation ##
+`npm install coffeebot`
+
 ## Supported networks ##
 - local readline for debugging
 - IRC
@@ -10,7 +13,6 @@ Inspired by [evilbot](https://github.com/defunkt/evilbot).
 - Convore
 - XMPP/Jabber conferences
 - DSL-ish thing
-- package.json
 
 ## Show me the code! ##
     {Bot, IRC} = require 'coffeebot'

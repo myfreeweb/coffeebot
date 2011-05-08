@@ -1,3 +1,6 @@
+fs = require 'fs'
+version  = JSON.parse(fs.readFileSync(__dirname + '/../package.json', 'utf-8')).version
+
 class Bot
   constructor: (ua = 'Bot/0.0') ->
     # format: { re: /regexp/, desc: 'string', callback: function }
@@ -34,7 +37,7 @@ class Bot
     @accounts.push account
 
   set_ua: (ua) ->
-    @ua = "#{ua} coffeebot/0.0 node/#{process.versions.node}"
+    @ua = "#{ua} coffeebot/#{version} node/#{process.versions.node}"
     for account in @accounts
       try
         account.emit 'set_ua', @ua
