@@ -1,4 +1,4 @@
-{Bot, Local} = require './src/index'
+{Bot, Local, IRC} = require './src/index'
 
 b = new Bot
 
@@ -10,3 +10,4 @@ b.hear /bye/, (msg) ->
   process.kill process.pid, 'SIGKILL'
 
 b.connect new Local
+b.connect new IRC 'localhost', 'demobot', ['#test']
