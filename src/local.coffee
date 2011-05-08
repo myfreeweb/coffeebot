@@ -14,9 +14,11 @@ class Local extends EventEmitter
       repl = readline.createInterface stdin, stdout, autocomplete
     repl.setPrompt 'chat> '
     repl.on 'close', -> stdin.destroy()
-    repl.on 'line', (buffer) ->
-      @emit 'post', buffer.toString()
+    repl.on 'line', (buffer) =>
+      @emit 'message', author: 'tester', text: buffer.toString(), account: this
       repl.prompt()
     repl.prompt()
-    @on 'message', (text) ->
-      process.stdout.write text + '/n'
+    @on 'post', (text) ->
+      console.log text
+
+exports.Local = Local

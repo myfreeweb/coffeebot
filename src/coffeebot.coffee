@@ -10,24 +10,24 @@ class Bot
   # format: { author: 'string', text: 'string', account: account }
   dispatch: (msg) ->
     for handler in @handlers
-      do =>
-        if handler.re.test msg.text
-          msg.reply = (text) ->
-            msg.account.post text
-          handler.callback msg
+      if handler.re.test msg.text
+        msg.reply = (text) ->
+          msg.account.emit 'post', text
+        handler.callback msg
 
   say_all: (text) ->
     for account in @accounts
-      do =>
-        account.emit 'post', text
+      account.emit 'post', text
 
   hear: (re, desc, callback) ->
     @handlers.push re: re, desc: desc, callback: callback
 
   connect: (account) ->
-    account.on 'message', (msg) ->
+    account.on 'message', (msg) =>
       @dispatch msg
     @accounts.push account
 
   error: (callback) ->
     @onerror = callback
+
+exports.Bot = Bot
