@@ -9,7 +9,8 @@ class Bot
   # format: { author: 'string', text: 'string', account: account }
   dispatch: (msg) ->
     for handler in @handlers
-      if handler.re.test msg.text
+      if match = msg.text.match handler.re
+        msg.match = match
         msg.reply = (text) ->
           msg.account.emit 'post', text
         handler.callback msg
