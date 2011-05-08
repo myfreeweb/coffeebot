@@ -1,5 +1,6 @@
 # Coffeebot #
 a CoffeeScript framework for writing cross-network chat bots.
+Inspired by [evilbot](https://github.com/defunkt/evilbot).
 
 ## Supported networks ##
 - local readline for debugging
