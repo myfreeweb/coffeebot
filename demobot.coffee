@@ -9,5 +9,7 @@ b.hear /bye/, (msg) ->
   msg.reply "Bye!"
   process.kill process.pid, 'SIGKILL'
 
+b.help /help/, "I know these commands:"
+
 b.connect new Local
 b.connect new IRC 'localhost', 'demobot', ['#test']

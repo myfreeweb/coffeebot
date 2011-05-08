@@ -39,4 +39,13 @@ class Bot
         account.emit 'set_ua', @ua
       catch err
 
+  help: (re, desc) =>
+    @hear re, (msg) =>
+      help = @handlers.map (h) ->
+        if h.re isnt re
+          s = h.re.toString().replace(/\//g, '')
+          s += ": " + h.desc if h.desc
+          s
+      msg.reply "#{desc}\n#{help.join "\n"}"
+
 exports.Bot = Bot
