@@ -20,6 +20,9 @@ class Bot
       account.emit 'post', text
 
   hear: (re, desc, callback) ->
+    if typeof desc == 'function'
+      callback = desc
+      desc = ''
     @handlers.push re: re, desc: desc, callback: callback
 
   connect: (account) ->
