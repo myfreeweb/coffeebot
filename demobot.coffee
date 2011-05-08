@@ -1,6 +1,6 @@
 {Bot, Local, IRC} = require './src/index'
 
-b = new Bot
+b = new Bot 'Demobot/1.0'
 
 b.hear /hi/, 'Greet users', (msg) ->
   msg.reply "Hi, #{msg.author}"

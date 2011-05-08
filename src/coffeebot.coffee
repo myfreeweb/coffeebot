@@ -1,11 +1,10 @@
 class Bot
-  constructor: ->
+  constructor: (ua = 'Bot/0.0') ->
     # format: { re: /regexp/, desc: 'string', callback: function }
     @handlers = []
     # format: EventEmitter, emits 'message' and gets 'post'
     @accounts = []
-    # format: function
-    @onerror  = console.log
+    @set_ua ua
 
   # format: { author: 'string', text: 'string', account: account }
   dispatch: (msg) ->
@@ -28,9 +27,16 @@ class Bot
   connect: (account) ->
     account.on 'message', (msg) =>
       @dispatch msg
+    try
+      account.emit 'set_ua', @ua
+    catch err
     @accounts.push account
 
-  error: (callback) ->
-    @onerror = callback
+  set_ua: (ua) ->
+    @ua = "#{ua} coffeebot/0.0 node/#{process.versions.node}"
+    for account in @accounts
+      try
+        account.emit 'set_ua', @ua
+      catch err
 
 exports.Bot = Bot
