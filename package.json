@@ -3,12 +3,12 @@
   "description": "Write cross-network chat bots in CoffeeScript",
   "version": "0.1.0",
   "keywords": [ "coffeescript", "chat", "irc" ],
-  "author": "Grigory V. <me@myfreeweb.ru>",
+  "author": "Grigory V. <floatboth@me.com>",
   "maintainers": [
-    {"name": "Grigory V.", "web": "http://myfreeweb.ru"}
+    {"name": "Grigory V.", "web": "http://floatboth.com"}
   ],
   "contributors": [
-    {"name": "Grigory V.", "web": "http://myfreeweb.ru"}
+    {"name": "Grigory V.", "web": "http://floatboth.com"}
   ],
   "licenses": [
     {"type": "MIT", "url": "https://github.com/myfreeweb/coffeebot/raw/master/LICENSE"}
@@ -18,7 +18,7 @@
     "url": "git://github.com/myfreeweb/coffeebot.git"
   },
   "bugs": {
-    "email": "me@myfreeweb.ru",
+    "email": "floatboth@me.com",
     "url": "https://github.com/myfreeweb/coffeebot/issues"
   },
   "engines": {
