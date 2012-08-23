@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/myfreeweb/coffeebot.png)](http://travis-ci.org/myfreeweb/coffeebot)
 # Coffeebot #
 a CoffeeScript framework for writing cross-network chat bots.
 Inspired by [evilbot](https://github.com/defunkt/evilbot).
